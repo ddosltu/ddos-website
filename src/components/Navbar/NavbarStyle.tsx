@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import { device } from './device';
+import { device } from '../../styles/device';
 
 declare global {
 	namespace JSX {

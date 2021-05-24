@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import HamburgerMenu from './HamburgerMenu/HamburgerMenu';
-import { NavBar, Nav, ImageLink, LinkList, LinkItem, Link, Dropdown, DropdownContent } from '../styles/NavbarStyle';
-import logoImg from '../resources/images/logo.png';
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
+import { NavBar, Nav, ImageLink, LinkList, LinkItem, Link, Dropdown, DropdownContent } from './NavbarStyle';
+import logoImg from '../../resources/images/logo.png';
 
 type Link = {
 	name: string;

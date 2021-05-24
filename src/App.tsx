@@ -12,8 +12,8 @@ export default function App() {
 			name: 'About',
 			to: '/about',
 			dropdown: [
-				{ name: 'Föreningen', to: '/info' },
-				{ name: 'Styrelsen', to: '/board' },
+				{ name: 'Association', to: '/info' },
+				{ name: 'Board', to: '/board' },
 			],
 		},
 	];

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { NavBar, Nav, LinkList, LinkItem, Link, Dropdown, DropdownContent } from '../styles/NavbarStyle';
+import { useState } from 'react';
+import HamburgerMenu from './HamburgerMenu/HamburgerMenu';
+import { NavBar, Nav, ImageLink, LinkList, LinkItem, Link, Dropdown, DropdownContent } from '../styles/NavbarStyle';
+import logoImg from '../resources/images/logo.png';
 
 type Link = {
 	name: string;
@@ -12,10 +14,15 @@ interface Props {
 
 export default function Navbar(props: Props) {
 	const { links } = props;
+	const [openMenu, setOpenMenu] = useState(false);
 
 	return (
 		<NavBar>
-			<Nav>
+			<HamburgerMenu onChange={(e: boolean) => setOpenMenu(e)} />
+			<ImageLink to={'/'}>
+				<img src={logoImg} alt="Logotype" width="auto" height="60px" />
+			</ImageLink>
+			<Nav open={openMenu}>
 				<LinkList horizontal>
 					{links.map((link, index) => {
 						return (
